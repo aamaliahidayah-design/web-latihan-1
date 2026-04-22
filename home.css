@@ -1,0 +1,221 @@
+/* ===================== IMPORT FONT ===================== */
+/* 
+Mengambil font dari Google Fonts 
+@import digunakan untuk memanggil resource eksternal (font, css lain, dll)
+Disarankan di bagian paling atas file CSS
+*/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+
+/* ===================== RESET & GLOBAL ===================== */
+/* 
+Selector * (universal selector) digunakan untuk semua elemen HTML
+box-sizing: border-box sangat penting:
+- width/height akan menghitung padding + border
+- mempermudah perhitungan layout
+*/
+* {
+	box-sizing: border-box;
+}
+
+
+/* ===================== BODY ===================== */
+/* 
+Body adalah root dari semua tampilan halaman
+Biasanya digunakan untuk set font global dan reset margin default browser
+*/
+body {
+   font-family: 'Quicksand', sans-serif; /* font utama */
+   margin: 0;  /* menghilangkan margin default browser */
+   padding: 0; /* menghilangkan padding default */
+}
+
+
+/* ===================== HEADING ===================== */
+/* 
+Multiple selector: h2, h3
+Digunakan untuk memberikan style yang sama ke beberapa elemen
+*/
+h2, h3 {
+  color: #11323a;
+}
+
+
+/* ===================== HEADER ===================== */
+/* 
+display: inline biasanya tidak diperlukan untuk header
+(default header adalah block)
+Tapi tetap tidak error
+*/
+header {
+	display: inline;
+}
+
+
+/* ===================== JUMBOTRON ===================== */
+/* 
+Class .jumbotron digunakan untuk banner utama
+Biasanya berisi judul besar dan deskripsi
+*/
+.jumbotron {
+	font-size: 20px;
+	padding: 60px;
+	background-color: #215e54;
+	text-align: center;
+	color: rgb(128, 235, 247);
+}
+
+
+/* ===================== NAVIGATION ===================== */
+/* 
+nav a = selector descendant (a di dalam nav)
+Digunakan untuk styling link menu
+*/
+nav a {
+   font-size: 18px;
+   font-weight: 400;
+   text-decoration: none; /* menghilangkan garis bawah */
+   color: rgb(202, 116, 45);
+}
+
+/* 
+Pseudo-class :hover 
+Digunakan saat user mengarahkan mouse ke elemen
+*/
+nav a:hover {
+   font-weight: bold;
+}
+
+/* 
+nav li untuk membuat menu horizontal
+display: inline → membuat list ke samping (horizontal)
+*/
+nav li {
+	display: inline;
+	list-style-type: none; /* hilangkan bullet */
+	margin-right: 20px;
+}
+
+/* 
+position: sticky → membuat navbar menempel saat scroll
+top: 0 → posisi menempel di atas
+*/
+nav {
+	background-color: #0aa9b4;
+	padding: 5px;
+	position: sticky;
+	top: 0;
+}
+
+
+/* ===================== MAIN ===================== */
+/* 
+overflow: auto → solusi klasik untuk float agar tidak collapse
+*/
+main{
+	padding : 20px;
+	overflow: auto;
+}
+
+
+/* ===================== LAYOUT KONTEN ===================== */
+/* 
+#content → ID selector
+float: left → konten di kiri
+width: 75% → mengambil 75% lebar layar
+*/
+#content{
+	float: left;
+	width: 75%;
+}
+
+
+/* ===================== SIDEBAR ===================== */
+/* 
+aside → semantic HTML5 untuk sidebar
+float: right → posisi kanan
+*/
+aside{
+	float: right;
+	width: 25%;
+	padding-left: 20px;
+}
+
+
+/* ===================== CARD ===================== */
+/* 
+.card → reusable class (bisa dipakai di banyak elemen)
+box-shadow → efek bayangan (UI modern)
+border-radius → sudut membulat
+*/
+.card{
+	box-shadow: 0 4px 8px 0 rgba(9, 157, 22, 0.2);
+	border-radius: 5px;
+	padding: 20px;
+	margin-top: 20px;
+}
+
+
+/* ===================== RESPONSIVE DESIGN ===================== */
+/* 
+Media Query → digunakan untuk membuat website responsive
+(max-width: 1000px) → berlaku jika layar <= 1000px
+Biasanya untuk tablet/mobile
+*/
+@media screen and (max-width: 1000px){
+
+	/* 
+	Layout berubah jadi 1 kolom (stack)
+	*/
+	#content,
+	aside{
+		width: 100%;
+		padding: 0;
+	}
+}
+
+
+/* ===================== IMAGE ===================== */
+/* 
+object-fit: cover → gambar akan menyesuaikan tanpa distorsi
+max-height → membatasi tinggi gambar
+*/
+.featured-image{
+	width: 100%;
+	max-height: 300px;
+	object-fit: cover;
+	object-position: center;
+}
+
+
+/* ===================== SIDEBAR PROFILE ===================== */
+/* Custom font untuk link di sidebar pengumuman */
+aside ul li a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    text-decoration: none; /* Menghilangkan garis bawah biru */
+    color: #0061a1;        /* Warna biru yang lebih soft, senada dengan footermu */
+    transition: 0.3s;      /* Biar halus pas kursor nempel */
+}
+
+/* Efek pas kursor diarahkan ke tulisan */
+aside ul li a:hover {
+    color: #1a86ce;
+    text-decoration: underline; /* Garis bawah muncul hanya pas di-hover */
+}
+
+/* Menghilangkan titik bullet jika ingin lebih bersih */
+aside ul {
+    list-style-type: none;
+    padding-left: 5px;
+}
+
+/* ===================== FOOTER ===================== */
+footer{
+	background-color: #031f25;
+	text-align:center;
+	font-weight: bold;
+	color:white;
+	padding: 20px;	
+}
+
