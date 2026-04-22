@@ -1,0 +1,151 @@
+<!-- 
+DOCTYPE digunakan untuk memberi tahu browser bahwa dokumen ini menggunakan HTML5 
+Ini penting agar browser merender halaman dengan standar terbaru
+-->
+<!DOCTYPE html>
+
+<!-- 
+Elemen root dari HTML, semua konten harus berada di dalam tag <html>
+Atribut lang="id" (disarankan) untuk memberi tahu bahasa halaman (aksesibilitas & SEO)
+-->
+<html lang="id">
+
+<!-- ===================== BAGIAN HEAD ===================== -->
+<head>
+    <!-- 
+    Metadata dasar halaman web 
+    Tidak ditampilkan langsung ke user, tapi penting untuk browser dan mesin pencari
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO dasar -->
+    <meta name="description" content="Profil Kota Banda Aceh meliputi sejarah, geografis, dan wisata.">
+    <meta name="keywords" content="Banda Aceh, sejarah, wisata, geografis, Aceh">
+    <meta name="author" content="Prodi PTI">
+    <!-- Judul halaman yang tampil di tab browser -->
+    <title>Profil Banda Aceh</title>
+
+    <!-- 
+    Menghubungkan file CSS eksternal 
+    rel="stylesheet" artinya file ini adalah stylesheet
+    href menunjuk lokasi file CSS
+    -->
+    <link rel="stylesheet" type="text/css" href="assets/styles/home.css">
+</head>
+
+<!-- ===================== BAGIAN BODY ===================== -->
+<!-- Semua konten yang terlihat oleh pengguna ada di dalam <body> -->
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<!-- 
+<header> adalah elemen semantic HTML5 
+Digunakan untuk bagian atas halaman, biasanya berisi judul, logo, dan navigasi
+-->
+<header>
+
+    <!-- 
+    div digunakan untuk grouping (pengelompokan)
+    class="jumbotron" biasanya digunakan untuk tampilan hero/banner besar
+    -->
+    <div class="jumbotron">
+        <h1>PUSAT STUDI  INOVASI TEKNOLOGI</h1>
+        <!-- paragraf deskripsi -->
+        <p>
+           Fakultas tarbiyah dan keguruan
+        </p>
+    </div>
+
+    <!-- 
+    <nav> adalah elemen semantic untuk navigasi menu
+    -->
+    <nav>
+        <!-- 
+        <ul> = unordered list (list tanpa nomor)
+        Digunakan untuk menu navigasi
+        -->
+        <ul>
+            <!-- 
+            <a href="#sejarah"> berarti link menuju elemen dengan id="sejarah"
+            Ini disebut internal link (anchor link)
+            -->
+            <li><a href="#beranda">beranda</a></li>
+            <li><a href="#profil">profil</a></li>
+             <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ===================== MAIN CONTENT ===================== -->
+<!-- 
+<main> adalah elemen utama isi halaman
+Hanya boleh ada satu <main> dalam satu halaman
+-->
+<main>
+
+    <!-- 
+    div sebagai container utama konten
+    -->
+    <div id="content">
+
+        <!-- ===================== ARTICLE 1 ===================== -->
+        <!-- 
+        <article> digunakan untuk konten mandiri (independen)
+        Cocok untuk artikel, berita, blog, dll
+        -->
+         <article class="card">
+            <h2 id="Visi & Misi">Visi & Misi</h2>
+            <p>menjadi pusat studi unggul 
+                dalam pengembangan teknologi 
+                pembelajaran di era digital</p>
+
+           <p>kami berfokus pada riset 
+                berbasis outcome-based education
+          </p>
+         
+
+        <article>
+
+    </article>
+    </div>
+    <!-- ===================== SIDEBAR ===================== -->
+    <!-- 
+    <aside> digunakan untuk konten samping (sidebar)
+    Biasanya berisi informasi tambahan
+    -->
+    <aside>
+
+        <!-- article di dalam aside -->
+        <article class="profile card">
+
+            <!-- header dalam article -->
+            <header>
+                <h2>pengumuman</h2>
+                
+                <ul>
+            <li><a href="#pendaftaran asisten">pendaftaran asisten</a></li>
+             <li><a href="jadwal pelatihan">jadwal pelatihan</a></li>
+             </ul> 
+            </header>
+               
+        </article>
+</main>
+<!-- ===================== FOOTER ===================== -->>
+    <!-- 
+    <footer> digunakan untuk bagian bawah halaman
+    Biasanya berisi copyright, kontak, dll
+    -->
+    <footer>
+        <p>copyright @ 2026 PUSAT STUDI INOVASI TEKNOLOGI</p>
+    </footer>
+
+<!-- ===================== JAVASCRIPT ===================== -->
+<!-- 
+Menghubungkan file JavaScript eksternal
+Diletakkan di akhir agar loading HTML lebih cepat
+-->
+<script src="assets/script.js"></script>
+
+</body>
+</html>
